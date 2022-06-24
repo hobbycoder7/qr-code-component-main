@@ -1,28 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | QR code component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | QR code component</title>
 
-  Improve your front-end skills by building projects
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
 
-  Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      /* store colors as variables for later */
+      :root {
+        --color-white: hsl(0, 0%, 100%);
+        --color-light-gray: hsl(212, 45%, 89%);
+        --color-grayish-blue: hsl(220, 15%, 55%);
+        --color-dark-blue: hsl(218, 44%, 22%);
+      }
+
+      /* "reset css" */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Outfit", Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        background-color: var(--color-light-gray);
+      }
+
+      /* .wrapper centers .container vertically and horizontally on screen */
+      .wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100vh;
+        place-items: center;
+      }
+
+      /* qr code css */
+
+      .container {
+        background-color: var(--color-white);
+        width: 258px;
+        border: #dbe1e9 1px solid;
+        border-radius: 15px;
+        padding: 12px;
+        box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+      }
+
+      .qr-code {
+        margin-bottom: 14px;
+      }
+      .qr-code img {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      .text-block {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .text-block h3 {
+        color: var(--color-dark-blue);
+        margin-bottom: 16px;
+      }
+      .text-block p {
+        color: var(--color-grayish-blue);
+        text-align: center;
+        font-size: smaller;
+        line-height: 1.1;
+        margin: 0 10px;
+      }
+
+      /* footer */
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        padding: 10px;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="qr-code">
+          <img src="/images/image-qr-code.png" alt="Image of QR code" />
+        </div>
+        <div class="text-block">
+          <h3>Improve your front-end skills by building projects</h3>
+          <p>
+            Scan the QR code to visit Frontend Mentor and take your coding
+            skills to the next level
+          </p>
+        </div>
+      </div>
+      <footer class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://www.github.com/hobbycoder7">hobbycoder7</a>.
+      </footer>
+    </div>
+  </body>
 </html>
